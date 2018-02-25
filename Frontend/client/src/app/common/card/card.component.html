@@ -1,0 +1,17 @@
+<div class="card">
+  <img class="card-img-top" src="https://d1v73nxuzaqxgd.cloudfront.net/restaurants/{{restaurant.logo}}">
+  <div class="card-block">
+    <h4 class="card-title">{{restaurant.name}}</h4>
+    <strong>Categorias</strong>
+    <ul>
+      <li *ngFor="let cat of categories">
+        {{ cat }}
+      </li>
+    </ul>
+    <p>
+      <rating [(ngModel)]="restaurant.ratingScore" [readonly]="true" [disabled]="false"></rating>
+    </p>
+    <p><strong>Hora máxima estimada de llegada:</strong> {{restaurant.deliveryTimeMaxMinutes}} min</p>
+    <a href="http://www.pedidosya.com.uy/restaurantes/montevideo/{{restaurant.link}}-menu" class="btn btn-primary" target="_blanck">Menu</a>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<nav class="sidebar" [class.push-right]="properties.show" >
+    <ul class="list-group">
+        <a *ngFor="let node of menuData" title="{{node.title}}" routerLink="{{node.routerLink}}" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="{{node.icon}}"></i>&nbsp;{{node.displayName}}
+        </a>
+
+        <a title="{{translate('menu.logout.title')}}" (click)="logout()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-sign-out"></i>&nbsp;{{translate("menu.logout.text")}}
+        </a>
+    </ul>
+</nav>
+<div [ngClass]="(properties.show)?'overlay':'hidden'" (click)="closeMenu()"></div>

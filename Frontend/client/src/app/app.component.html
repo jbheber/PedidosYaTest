@@ -1,0 +1,8 @@
+<private-page-header *ngIf="isUserLoggedIn" [sidebarProperties]="sidebarProperties"></private-page-header>
+<sidenav [properties]="sidebarProperties" *ngIf="isUserLoggedIn"></sidenav>
+<div [class.private-body]="isUserLoggedIn" [class.public-body]="!isUserLoggedIn">
+    <div class="views">
+        <router-outlet> </router-outlet>
+    </div>
+</div>
+<toaster-container></toaster-container>

@@ -1,0 +1,55 @@
+@import "../../../assets/commonStyles/main.scss";
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px; }
+
+a.navbar-brand {
+  color: black;
+  padding: 5px 15px;
+}
+
+a.navbar-brand:hover,
+a.navbar-brand:active {
+  color: $main-secondary;
+}
+
+.topnav {
+    border-radius: 0;
+    padding : 6px;
+    z-index:2;
+    .text-center{
+        text-align: center;
+        padding-left : 0;
+        cursor: pointer;
+    }
+}
+
+.navbar-toggler-right {
+  margin-top: 7px;
+}
+
+.navbar-toggler-right i {
+  color: black;
+}
+
+.fixed-top {
+  background-color: whitesmoke;
+}
+.full-width {
+  width: 100%;
+}
+.full-width p {
+  text-align: right;
+}
+@media screen and (max-width: 992px) {
+    .header-logo {
+      width: 26px;
+      height: 26px;
+   }
+
+   .fixed-top {
+     min-height: 60px;
+   }
+}

@@ -1,0 +1,17 @@
+@import "./colors.scss";
+@import "./font-sizes.scss";
+
+$textboxRadius: 3px;
+
+.textbox {
+    border: 1px solid $control-border;
+    font-size: $normal;
+    border-radius: $textboxRadius;
+    -webkit-border-radius: $textboxRadius;
+    -moz-border-radius: $textboxRadius;
+    padding: 10px 16px;
+
+    &.important-textbox {
+        font-size: $large;
+    }
+}

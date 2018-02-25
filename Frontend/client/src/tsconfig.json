@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "${workspaceRoot}/client/src",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
+    "mapRoot": "./",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "${workspaceRoot}/compiledServer/dist",
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "../node_modules/@types"
+    ]
+  }
+}

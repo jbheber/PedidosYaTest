@@ -1,0 +1,22 @@
+@import "../assets/commonStyles/main.scss";
+
+.private-body{
+    padding: 60px 15px 15px 235px;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: $main-primary;
+    min-height: 100%;
+}
+
+.views {
+    padding-top: 15px;
+}
+
+@media screen and (max-width: 991px) {
+    .private-body {
+        padding-left: 0px !important;
+    }
+}

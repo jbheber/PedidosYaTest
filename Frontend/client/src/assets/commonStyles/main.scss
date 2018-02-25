@@ -1,0 +1,14 @@
+@import "./colors.scss";
+@import "./font-sizes.scss";
+
+$font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-height: 50px;
+
+.btn-custom-success {
+    background-color: $main-secondary;
+    font-weight: bold;
+}
+
+.text-on-background {
+    color: white;
+}

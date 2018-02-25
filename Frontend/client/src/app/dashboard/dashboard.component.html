@@ -1,0 +1,27 @@
+<div class="col-12">
+  <div class="col-12">
+    <agm-map [latitude]="mapProperties.latitude" [longitude]="mapProperties.longitude" [zoom]="mapProperties.zoom" [minZoom]="mapProperties.minZoom"
+      (mapClick)="mapClicked($event)">
+      <agm-circle *ngIf="isActiveGeoLocation" [latitude]="userPosition.latitude" [longitude]="userPosition.longitude" [radius]="50"
+        [fillColor]="'blue'" [circleDraggable]="false" [editable]="false">
+      </agm-circle>
+      <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude" [title]="marker.title"
+        (markerClick)="markerClicked(marker)">
+        <agm-info-window (infoWindowClose)=resetMap($event)>
+          <div class="col-12">
+            <div class="col-12">
+              <img src="https://d1v73nxuzaqxgd.cloudfront.net/restaurants/{{marker.logo}}" />
+            </div>
+            <div class="col-12">
+              <a href="http://www.pedidosya.com.uy/restaurantes/montevideo/{{marker.link}}-menu" target="_blank">{{marker.title}}</a>
+            </div>
+          </div>
+        </agm-info-window>
+      </agm-marker>
+    </agm-map>
+  </div>
+  <div class="col-12 cards-container">
+    <div *ngFor="let restaurant of restaurants" class="col-lg-4">
+      <restaurant-card  [restaurant]="restaurant"></restaurant-card>
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "noEmitOnError": true,
+        "experimentalDecorators": true,
+        "watch": true,
+        "mapRoot": "${workspaceRoot}",
+        "typeRoots": [
+            "typings/global",
+            "typings/modules"
+        ],
+        "outDir": "${workspaceRoot}/compiledServer",
+        "removeComments": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "inlineSources": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

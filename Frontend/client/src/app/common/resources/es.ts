@@ -1,0 +1,17 @@
+export const strings = {
+    "error.connectionRefused": "Error de conexión, contacte a su administrador de sistemas",
+    "login.loginButton.text": "Iniciar sesión",
+    "login.password.placeholder": "Contraseña",
+    "login.rememberMe.label": "Recuérdame",
+    "login.title": "Iniciar sesión",
+    "login.username.placeholder": "Nombre de usuario",
+    "toaster.login.title": "Inicio de sesión",
+    "toaster.login.success": "El usuario {0} inició sesión correctamente.",
+    "toaster.login.error": "Autenticación falló, compruebe que su usuario y contraseña sean correctos.",
+    "menu.logout.text": "Cerrar sesión",
+    "menu.logout.title": "Cerrar sesión",
+    "menu.report.text": "Reportes",
+    "menu.report.title": "Reportes",
+    "menu.dashboard.title": "Panel de control",
+    "menu.dashboard.text": "Panel de control",
+};
