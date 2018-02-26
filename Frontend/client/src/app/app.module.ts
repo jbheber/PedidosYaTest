@@ -7,9 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CookieModule } from 'ngx-cookie';
-import { ToasterModule } from 'angular2-toaster';
-import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
-import { BootstrapModalModule } from 'ngx-bootstrap-modal';
+import { ToasterModule, ToasterService } from 'angular2-toaster';
 import { AgmCoreModule } from '@agm/core';
 import { RatingModule } from "ngx-rating";
 
@@ -56,15 +54,13 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     NgbModule.forRoot(),
     ToasterModule,
-    AngularFontAwesomeModule,
-    BootstrapModalModule,
     CookieModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC4zR6G97uvPZBuWjoLGUbBVpXnG6mjA2w'
     }),
     RatingModule
   ],
-  providers: [AccountService, UserService, RestaurantService, ReportsService],
+  providers: [AccountService, UserService, RestaurantService, ReportsService, ToasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
